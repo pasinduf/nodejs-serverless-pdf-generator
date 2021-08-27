@@ -1,0 +1,23 @@
+{
+  "name": "sls-pdf-generator",
+  "version": "1.0.0",
+  "main": "handler.js",
+  "scripts": {
+    "build": "mkdir dist && babel ./ -s -d dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "copy-webpack-plugin": "5.1.1",
+    "ejs": "3.0.2",
+    "express": "4.17.1",
+    "html-pdf": "2.2.0",
+    "path": "0.12.7"
+  },
+  "devDependencies": {
+    "serverless-webpack": "5.3.1",
+    "webpack": "4.42.1"
+  }
+}

@@ -1,0 +1,23 @@
+service: sls-pdf-generator
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+package:
+   include:
+    - public/reports/**
+    - templates/report.ejs
+
+plugins:
+  - serverless-webpack
+
+functions:
+  createReport:
+    handler: handler.createReport
+    events:
+      - http:
+         path: report
+         method: post
+         cors: true
+
